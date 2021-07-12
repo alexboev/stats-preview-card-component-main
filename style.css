@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "LexendDeca";
+  src: url("fonts/LexendDeca-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+body {
+  background-color: #090b1a;
+}
+body .card {
+  border-radius: 8px;
+  background-color: #1b1938;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  text-align: center;
+  width: 327px;
+  display: grid;
+  grid-template-columns: 327px;
+  grid-template-rows: 240px 1fr;
+}
+@media screen and (min-width: 1440px) {
+  body .card {
+    width: 1110px;
+    text-align: initial;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .card {
+    grid-template-columns: 1fr 540px;
+    grid-template-rows: 446px;
+  }
+}
+body .card .card-content {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 53px 1fr 53px;
+  grid-template-rows: 53px 1fr 53px;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content {
+    grid-template-columns: 75px 1fr 75px;
+    grid-template-rows: 75px 1fr 75px;
+  }
+}
+body .card .card-content .card-content-column {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content .card-content-column {
+    grid-template-rows: 1fr 95px;
+  }
+}
+body .card .card-content .card-content-column .card-main-content {
+  grid-row: 1/1;
+  font-family: "Inter";
+}
+body .card .card-content .card-content-column .card-main-content .card-title {
+  margin: 0px;
+  margin-top: -20px;
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+  line-height: 1.2;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content .card-content-column .card-main-content .card-title {
+    font-size: 36px;
+  }
+}
+body .card .card-content .card-content-column .card-main-content .card-title .card-title-accent {
+  color: #aa5cdb;
+}
+body .card .card-content .card-content-column .card-main-content .card-main-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 15px;
+}
+body .card .card-content .card-content-column .card-stats {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-content: center;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content .card-content-column .card-stats {
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content .card-content-column .card-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+  }
+}
+body .card .card-content .card-content-column .card-stats .card-stats-panel {
+  margin-top: 34px;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-content .card-content-column .card-stats .card-stats-panel {
+    grid-row: 2/2;
+  }
+}
+body .card .card-content .card-content-column .card-stats .card-stats-panel .cards-stats-counter {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+body .card .card-content .card-content-column .card-stats .card-stats-panel .cards-stats-name {
+  font-family: "LexendDeca";
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  line-height: 2.1;
+}
+body .card .card-image {
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 8px 8px 0 0;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-size: 100%;
+  background-color: #aa5cdb;
+  background-blend-mode: multiply;
+}
+@media screen and (min-width: 1440px) {
+  body .card .card-image {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 0 8px 8px 0;
+    background-image: url("./images/image-header-desktop.jpg");
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
