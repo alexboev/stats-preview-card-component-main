@@ -23,8 +23,12 @@ body .card {
 }
 @media screen and (min-width: 1440px) {
   body .card {
-    width: 1110px;
     text-align: initial;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .card {
+    width: 1110px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -37,8 +41,8 @@ body .card .card-content {
   grid-column: 1;
   grid-row: 2;
   display: grid;
-  grid-template-columns: 53px 1fr 53px;
-  grid-template-rows: 53px 1fr 53px;
+  grid-template-columns: 36px 1fr 36px;
+  grid-template-rows: 36px 1fr 36px;
 }
 @media screen and (min-width: 1440px) {
   body .card .card-content {
@@ -55,9 +59,7 @@ body .card .card-content {
 body .card .card-content .card-content-column {
   grid-column: 2/3;
   grid-row: 2/3;
-  padding: 0px;
   display: grid;
-  grid-template-columns: 1fr;
 }
 @media screen and (min-width: 1440px) {
   body .card .card-content .card-content-column {
@@ -70,7 +72,6 @@ body .card .card-content .card-content-column .card-main-content {
 }
 body .card .card-content .card-content-column .card-main-content .card-title {
   margin: 0px;
-  margin-top: -20px;
   font-weight: 700;
   font-size: 28px;
   color: white;
@@ -78,6 +79,7 @@ body .card .card-content .card-content-column .card-main-content .card-title {
 }
 @media screen and (min-width: 1440px) {
   body .card .card-content .card-content-column .card-main-content .card-title {
+    margin-top: -20px;
     font-size: 36px;
   }
 }
@@ -108,7 +110,7 @@ body .card .card-content .card-content-column .card-stats {
   }
 }
 body .card .card-content .card-content-column .card-stats .card-stats-panel {
-  margin-top: 34px;
+  margin-top: 24px;
 }
 @media screen and (min-width: 1440px) {
   body .card .card-content .card-content-column .card-stats .card-stats-panel {

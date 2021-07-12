@@ -21,7 +21,7 @@ $weight-bold: 700;
 $weight-regular: 400;
 
 // card content margin
-$card-content-margin-mobile: 53px;
+$card-content-margin-mobile: 36px;
 $card-content-margin-desktop: 75px;
 
 // card border radius
@@ -34,6 +34,7 @@ $color-headings: hsl(0, 0%, 100%);
 body {
     background-color: hsl(233, 47%, 7%);
 
+    // the whole card
     .card {
         // our card have rounded corners
         border-radius: $card-border-radius;
@@ -45,22 +46,30 @@ body {
         margin-right: auto;
         margin-top: 70px;
 
+        // the mobile design dictates to center horisontally the card content
         text-align: center;
+        @media screen and (min-width: $desktop-min-width) {
+            // we need to align the content to the left at the desktop
+            text-align: initial;
+        }
+        
 
+        // the width of the card is fixed and is dictated by design 
         width: 327px;
-
-        // the width of the card is fixed
+        
         @media screen and (min-width: $desktop-min-width) {
             width: 1110px;
-            text-align: initial;
         }
         
 
         // we need to split the card in two areas - one for the content and the other for an image
         display: grid;
+
+        // in the mobile design we need to place the image at the top of the card and then the rest of the content
         grid-template-columns: 327px;
         grid-template-rows: 240px 1fr;
 
+        // in the desktop version we need to arrange parts of the card horizontally
         @media screen and (min-width: $desktop-min-width) {
             grid-template-columns: 1fr 540px;
             grid-template-rows: 446px;
@@ -68,14 +77,17 @@ body {
     
         // it's the content part of the card - all the valuable information
         .card-content {
+            // at the mobile we need to place the content below the image
             grid-column: 1;
             grid-row: 2;
 
+            // at the desktop we need to place the content left to the image
             @media screen and (min-width: $desktop-min-width) {
                 grid-column: 1;
                 grid-row: 1;
             }
 
+            // we need to surround the card content by the margins
             display: grid;
             grid-template-columns: $card-content-margin-mobile 1fr $card-content-margin-mobile;
             grid-template-rows: $card-content-margin-mobile 1fr $card-content-margin-mobile;
@@ -85,31 +97,34 @@ body {
                 grid-template-rows: $card-content-margin-desktop 1fr $card-content-margin-desktop;
             }
             
+            // the card content part
             .card-content-column
             {
-                //background-color: lightgreen;
+                // we need to place the content at the center of the content zone of the card
                 grid-column: 2 / 3;
                 grid-row:  2 / 3;
-                padding: 0px;
+
+
                 display: grid;
 
-                grid-template-columns: 1fr;
-
+                // at the desctop we need to leave the gap between the content and the left side of the image
                 @media screen and (min-width: $desktop-min-width) {
                     grid-template-rows: 1fr 95px;
                 }
     
+                // the main text of the card
                 .card-main-content {
                     grid-row: 1 / 1;
                     font-family: 'Inter';
     
                     .card-title {
                         margin: 0px;
-                        margin-top: -20px;
+                        
                         font-weight: $weight-bold;
                         font-size: 28px;
 
                         @media screen and (min-width: $desktop-min-width) {
+                            margin-top: -20px;
                             font-size: 36px;
                         }
 
@@ -130,10 +145,10 @@ body {
                     }
                 }
     
+                // the numbers part of the card
                 .card-stats
                 {
                     
-                    //background-color: lightcoral;
                     @media screen and (min-width: $desktop-min-width) {
                         grid-row: 2 / 2;
                     }
@@ -150,13 +165,9 @@ body {
                     }
                     
                     .card-stats-panel {
-                        //grid-column: 2 / 2;
-                        // grid-row: 1 / 1;
-                        //background-color: lightskyblue;
-                        margin-top: 34px;
+                        margin-top: 24px;
 
                         @media screen and (min-width: $desktop-min-width) {
-                            //grid-column: 1 / 1;
                             grid-row: 2 / 2;
                         }
     
